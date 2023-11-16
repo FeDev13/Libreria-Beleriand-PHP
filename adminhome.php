@@ -21,6 +21,7 @@
     <div class=" grid grid-cols-1 p-5">
         <?php
         include "models/connectDB.php";
+        include "controllers/deleteController.php";
         $sql = $conecttion->query("SELECT * FROM libros");
         while ($libros = $sql->fetch_object()) { ?>
 
@@ -28,8 +29,8 @@
                 <img class="p-5 w-[40%]" src=<?= $libros->imagen ?> alt="">
                 <h1 class="text-3xl mb-5 h-16 mx-8"><?= $libros->titulo ?></h1>
                 <div class="block">
-                    <button class="p-2 px-6 bg-teal-500 text-white rounded-md hover:bg-teal-600 my-8">Editar</button>
-                    <button class="p-2 px-6 bg-red-500 text-white rounded-md hover:bg-teal-600">Borrar</button>
+                    <button class="p-2 px-6 bg-teal-500 text-white rounded-md hover:bg-teal-600 my-8" name="editBtn">Editar</button>
+                    <a href="adminhome.php?id=<?=$libros->id?>" class="p-2 px-6 bg-red-500 text-white rounded-md hover:bg-teal-600" name="deleteBtn">Borrar</a>
                 </div>
                 
             </div>
