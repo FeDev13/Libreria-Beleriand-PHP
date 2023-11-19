@@ -1,4 +1,4 @@
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <?php
 if (!empty($_GET["id"])) {
     $id = $_GET["id"];

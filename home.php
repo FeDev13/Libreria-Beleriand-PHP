@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header class="lg:px-16 px-4 bg-white flex flex-wrap items-center py-4 shadow-md">
+    <header class="lg:px-16 px-4 bg-white flex flex-wrap items-center py-4 shadow-md sticky top-0 z-50">
         <div class="flex-1 flex justify-between items-center">
             <img src="./assets/text-1699919442524.png" alt="">
         </div>

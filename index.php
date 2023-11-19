@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header class="lg:px-16 px-4 bg-white flex flex-wrap items-center py-4 shadow-md">
+    <header class="lg:px-16 px-4 bg-white flex flex-wrap items-center py-4 shadow-md sticky top-0 z-50">
         <div class="flex-1 flex justify-between items-center">
             <a href="home.php"><img src="./assets/text-1699919442524.png" alt=""></a>
 
@@ -59,6 +59,8 @@
         <h2 class=" text-3xl font-bold my-10">Nuestro catalogo</h2>
     </div>
     <div class=" grid grid-cols-4 p-5">
+        
+        <!-- lista todos los productos -->
         <?php
         include "models/connectDB.php";
         $sql = $conecttion->query("SELECT * FROM libros");
@@ -85,7 +87,7 @@
                     </svg>
                 </div>
                 <p class="mb-5"><?= $libros->descripcion ?></p>
-                <h2 class="font-semibold mb-5"><?= $libros->precio ?></h2>
+                <p class="font-semibold mb-5">$<?= $libros->precio ?></p>
                 <button class="p-2 px-6 bg-teal-500 text-white rounded-md hover:bg-teal-600">Comprar</button>
                 <div class="sale absolute top-5 right-2 p-2 px-5 font-semibold bg-red-600 text-white uppercase">25% Off</div>
             </div>
@@ -93,6 +95,62 @@
         }
         ?>
     </div>
+    <footer class="px-3 pt-4 lg:px-9 border-t-2 bg-gray-50 mt-10 bg-teal-600">
+        <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4 mt-10">
+
+            <div class="sm:col-span-2">
+                <a href="#" class="inline-flex items-center">
+                    <img src="./assets/text-1699919442524.png" alt="logo" class="w-[70%]">
+                    <span class="ml-2 text-xl font-bold tracking-wide text-gray-800">Libros</span>
+                </a>
+                <div class="mt-6 lg:max-w-xl border-none">
+                    <img src="https://tap-multimedia-1143.nyc3.digitaloceanspaces.com/banner/194/small/pagosMobile.png" alt="">
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2 text-sm">
+                <p class="text-base font-bold tracking-wide text-gray-900">Atencion al cliente</p>
+                <a href="#">Formas de pago</a>
+                <a href="#">Formas y tiempos de envios</a>
+                <a href="#">FAQ</a>
+                <p class="text-base font-bold tracking-wide text-gray-900">Navegacion</p>
+                <a href="#">Ofertas</a>
+                <a href="#">Mas vendidos</a>
+                <a href="#">Categorias</a>
+            </div>
+
+            <div>
+
+                <div class="flex items-center gap-1 px-2">
+
+                    <a class="w-full min-w-xl" href="https://www.youtube.com/channel/UCo8tEi6SrGFP8XG9O0ljFgA">
+                        <img src="https://www.afip.gob.ar/images/f960/DATAWEB.jpg" alt="Youtube Button" class="h-28">
+                    </a>
+                </div>
+                <p class="text-base font-bold tracking-wide text-gray-900">Contacto</p>
+                <div class="flex">
+                    <p class="mr-1 text-gray-800">Email:</p>
+                    <a href="#" title="send email">beleriandlibros@gmail.com</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
+            <p class="text-sm text-white font-bold">© Copyright 2023 Beleriand libros. Todos los derechos reservados.</p>
+            <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+                <li>
+                    <a href="#" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Privacy
+                        &amp; Cookies Policy
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Disclaimer
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 </html>
