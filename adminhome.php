@@ -36,7 +36,7 @@
         while ($libros = $sql->fetch_object()) { ?>
 
             <div class=" w-[100%] h-[70%] flex mx-2 p-5 py-8 text-left justify-between shadow-2xl border-2 border-gray-400 rounded-md relative">
-                <img class=" w-[20%]" src=<?= $libros->imagen ?> alt="">
+                <img class=" w-[20%]" src="data:image/jpg; base64, <?php echo base64_encode($libros->imagen)?>">
                 <h1 class="text-3xl mb-5 h-16 mx-8"><?= $libros->titulo ?></h1>
                 <div class="block">
 
@@ -62,6 +62,7 @@
                     </a>
                     </button>
                     <button class="p-2 px-6 bg-red-600 text-white rounded-md" name="deleteBtn">
+                        <a href="adminhome.php?id=<?= $libros->id ?>">
                         <svg fill="#ffffff" width="24px" height="24px" viewBox="-6.7 0 122.88 122.88" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 109.484 122.88" xml:space="preserve" stroke="#000000">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                             <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -71,7 +72,7 @@
                                 </g>
                             </g>
                         </svg>
-                        <a href="adminhome.php?id=<?= $libros->id ?>"></a>
+                       </a>
                     </button>
 
                 </div>

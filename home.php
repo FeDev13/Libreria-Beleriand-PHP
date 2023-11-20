@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libreria Tierra Media</title>
+    <title>Beleriand libros</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
     <header class="lg:px-16 px-4 bg-white flex flex-wrap items-center py-4 shadow-md sticky top-0 z-50">
         <div class="flex-1 flex justify-between items-center">
-            <img src="./assets/text-1699919442524.png" alt="">
+            <a href="index.php"><img src="./assets/text-1699919442524.png" alt=""></a>
+
         </div>
 
         <label for="menu-toggle" class="pointer-cursor md:hidden block">
@@ -25,19 +26,7 @@
         <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
             <nav>
                 <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
-                    <div class="flex rounded-md mx-8 border-2 border-teal-400 p-2">
-                        <button class="mx-4">
-                            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path d="M19.9604 11.4802C19.9604 13.8094 19.0227 15.9176 17.5019 17.4512C16.9332 18.0247 16.2834 18.5173 15.5716 18.9102C14.3594 19.5793 12.9658 19.9604 11.4802 19.9604C6.79672 19.9604 3 16.1637 3 11.4802C3 6.79672 6.79672 3 11.4802 3C16.1637 3 19.9604 6.79672 19.9604 11.4802Z" stroke="#333333" stroke-width="2"></path>
-                                    <path d="M18.1553 18.1553L21.8871 21.8871" stroke="#333333" stroke-width="2" stroke-linecap="round"></path>
-                                </g>
-                            </svg>
-                        </button>
-                        <input type="text" placeholder="Autor, editorial, ISBN">
-                    </div>
+                    
 
                     <button class="p-2 px-6 bg-teal-500 text-white rounded-md hover:bg-teal-600 mx-4"><a href="index.php">Catalogo</a></button>
                     <svg width="32px" height="32px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000">
@@ -55,86 +44,83 @@
         </div>
     </header>
     <div class=" text-center">
-        <!-- component -->
-        <!-- This is an example component -->
-        <div class="w-[80%] mx-auto my-24">
+        <h2 class=" text-3xl font-bold my-10">Nuestro catalogo</h2>
+    </div>
+    <div class=" grid grid-cols-4 p-5">
+        <div class="w-full shadow p-5 rounded-lg bg-white">
+            <div class="relative">
+                <div class="absolute flex items-center ml-2 h-full">
+                    <svg class="w-4 h-4 fill-current text-primary-gray-dark" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.8898 15.0493L11.8588 11.0182C11.7869 10.9463 11.6932 10.9088 11.5932 10.9088H11.2713C12.3431 9.74952 12.9994 8.20272 12.9994 6.49968C12.9994 2.90923 10.0901 0 6.49968 0C2.90923 0 0 2.90923 0 6.49968C0 10.0901 2.90923 12.9994 6.49968 12.9994C8.20272 12.9994 9.74952 12.3431 10.9088 11.2744V11.5932C10.9088 11.6932 10.9495 11.7869 11.0182 11.8588L15.0493 15.8898C15.1961 16.0367 15.4336 16.0367 15.5805 15.8898L15.8898 15.5805C16.0367 15.4336 16.0367 15.1961 15.8898 15.0493ZM6.49968 11.9994C3.45921 11.9994 0.999951 9.54016 0.999951 6.49968C0.999951 3.45921 3.45921 0.999951 6.49968 0.999951C9.54016 0.999951 11.9994 3.45921 11.9994 6.49968C11.9994 9.54016 9.54016 11.9994 6.49968 11.9994Z"></path>
+                    </svg>
+                </div>
 
-            <div id="default-carousel" class="relative" data-carousel="static">
-                <!-- Carousel wrapper -->
-                <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
-                    <!-- Item 1 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First Slide</span>
-                        <img src="https://i0.wp.com/boingboing.net/wp-content/uploads/2014/05/johnhowe1.jpg?fit=1400%2C741&ssl=1" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-                    </div>
-                    <!-- Item 2 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="https://i.pinimg.com/564x/8d/56/7d/8d567d1020d36b7160d940040e1c82a7.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="https://www.tolkienguide.com/uploads/newbb/4446_652d755064244.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-                    </div>
-                </div>
-                <!-- Slider indicators -->
-                <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                </div>
-                <!-- Slider controls -->
-                <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-                    <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                        </svg>
-                        <span class="hidden">Previous</span>
-                    </span>
-                </button>
-                <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
-                    <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                        <span class="hidden">Next</span>
-                    </span>
+                <input type="text" placeholder="titulo, ISBN, autor" class="px-8 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+            </div>
+
+            <div class="flex items-center justify-between mt-4">
+                <p class="font-medium">
+                    Filtros
+                </p>
+
+                <button class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 text-sm font-medium rounded-md">
+                    Reset Filter
                 </button>
             </div>
 
-            <p class="mt-5">Sumérgete en el fascinante mundo de la Tierra Media a través de la puerta de nuestra librería dedicada exclusivamente a las obras del renombrado autor J.R.R. Tolkien. En nuestro santuario literario, los aficionados y amantes de la fantasía pueden explorar una extensa colección de libros, desde las legendarias epopeyas de "El Señor de los Anillos" y "El Hobbit", hasta los cuentos, ensayos y escritos menos conocidos pero igualmente cautivadores de este visionario creador.
-            </p>
-          
+            <div>
+                <div class="grid grid-cols-2 gap-4 mt-4">
+
+                    <select class="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+                        <option value="">Any Price</option>
+                        <option value="1000">RM 1000</option>
+                        <option value="2000">RM 2000</option>
+                        <option value="3000">RM 3000</option>
+                        <option value="4000">RM 4000</option>
+                    </select>
+
+                    <select class="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+                        <option value="">Bedrooms</option>
+                        <option value="1">1 bedroom</option>
+                        <option value="2">2 bedrooms</option>
+                        <option value="3">3 bedrooms</option>
+                        <option value="4">4 bedrooms</option>
+                        <option value="5">5 bedrooms</option>
+                    </select>
+
+                    <select class="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
+                        <option value="">Bathrooms</option>
+                        <option value="1">1 bathroom</option>
+                        <option value="2">2 bathrooms</option>
+                        <option value="3">3 bathrooms</option>
+                        <option value="4">4 bathrooms</option>
+                        <option value="5">5 bathrooms</option>
+                    </select>
+
+                    
+                </div>
+            </div>
         </div>
-        <h2 class=" text-3xl font-bold my-10">Recomendados</h2>
-    </div>
-    <div class=" flex flex-row border-4 border-b-teal-500 p-8">
+        <!-- lista todos los productos -->
         <?php
         include "models/connectDB.php";
-        $sql = $conecttion->query("SELECT * FROM libros WHERE id BETWEEN 4 AND 10");
+        $sql = $conecttion->query("SELECT * FROM libros");
         while ($libros = $sql->fetch_object()) { ?>
 
-            <div class=" w-[20%] mx-2 p-5 py-12 text-left transform duration-500 hover:-translate-y-2 shadow-2xl cursor-pointer relative">
-                <img class="p-5 w-[60%]" src=<?= $libros->imagen ?> alt="">
+            <div class=" w-[100%] mx-2 my-10 p-5 py-12 text-left transform duration-500 hover:-translate-y-2 shadow-2xl cursor-pointer relative">
+                <img class="p-5 w-[60%]" src="data:image/jpg; base64, <?php echo base64_encode($libros->imagen) ?>">
                 <h1 class="text-3xl mb-5 h-16"><?= $libros->titulo ?></h1>
-                <button class="sale absolute top-5 right-2 p-2 px-5 font-semibold bg-red-600 text-white uppercase">Ver</button>
-            </div>
-        <?php
-        }
-        ?>
-    </div>
-    <div class=" text-center">
-        <h2 class=" text-3xl font-bold my-10">Mas vendidos</h2>
-    </div>
-    <div class=" flex flex-row border-4 border-b-teal-500 p-8">
-        <?php
-        include "models/connectDB.php";
-        $sql = $conecttion->query('SELECT * FROM libros WHERE id BETWEEN 12 AND 13');
-        while ($libros = $sql->fetch_object()) { ?>
+                <div class="space-x-1 flex mb-5">
+                    <svg class="w-4 h-4 mx-2 fill-current text-orange-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                        <path d="M6.43 12l-2.36 1.64a1 1 0 0 1-1.53-1.11l.83-2.75a1 1 0 0 0-.35-1.09L.73 6.96a1 1 0 0 1 .59-1.8l2.87-.06a1 1 0 0 0 .92-.67l.95-2.71a1 1 0 0 1 1.88 0l.95 2.71c.13.4.5.66.92.67l2.87.06a1 1 0 0 1 .59 1.8l-2.3 1.73a1 1 0 0 0-.34 1.09l.83 2.75a1 1 0 0 1-1.53 1.1L7.57 12a1 1 0 0 0-1.14 0z" />
+                    </svg><?= $libros->rating?>
+                    
+                </div>
+                <p class="mb-5"><?= $libros->descripcion ?></p>
+                <p class="font-semibold mb-5">$<?= $libros->precio ?></p>
+                <p class="font-semibold mb-5 uppercase"><?= $libros->autor ?></p>
+                <button class="p-2 px-6 bg-teal-500 text-white rounded-md hover:bg-teal-600">Agregar al carrito</button>
 
-            <div class=" w-[20%] mx-2 p-5 py-12 text-left transform duration-500 hover:-translate-y-2 shadow-2xl cursor-pointer relative">
-                <img class="p-5 w-[60%]" src=<?= $libros->imagen ?> alt="">
-                <h1 class="text-3xl mb-5 h-16"><?= $libros->titulo ?></h1>
-                <button class="sale absolute top-5 right-2 p-2 px-5 font-semibold bg-red-600 text-white uppercase">Ver</button>
             </div>
         <?php
         }
@@ -153,7 +139,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col gap-2 text-sm">
+            <div class="flex flex-col gap-2 text-sm text-white">
                 <p class="text-base font-bold tracking-wide text-gray-900">Atencion al cliente</p>
                 <a href="#">Formas de pago</a>
                 <a href="#">Formas y tiempos de envios</a>
@@ -164,7 +150,7 @@
                 <a href="#">Categorias</a>
             </div>
 
-            <div>
+            <div class="text-white">
 
                 <div class="flex items-center gap-1 px-2">
 
@@ -183,20 +169,19 @@
 
         <div class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
             <p class="text-sm text-white font-bold">© Copyright 2023 Beleriand libros. Todos los derechos reservados.</p>
-            <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+            <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row text-white">
                 <li>
-                    <a href="#" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Privacy
+                    <a href="#" class="text-sm transition-colors duration-300 hover:text-deep-purple-accent-400">Privacy
                         &amp; Cookies Policy
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Disclaimer
+                    <a href="#" class="text-sm transition-colors duration-300 hover:text-deep-purple-accent-400">Disclaimer
                     </a>
                 </li>
             </ul>
         </div>
     </footer>
-    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
 </body>
 
 </html>
