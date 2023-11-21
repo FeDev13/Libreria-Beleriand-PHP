@@ -83,10 +83,10 @@
                 </div>
             </div>
         </div>
-        <!-- lista todos los productos -->
+        
         <?php
         include "models/connectDB.php";
-        $sql = $conecttion->query("SELECT * FROM libros");
+        $sql = $conecttion->query('SELECT * FROM libros WHERE autor NOT LIKE "%Tolkien%"');
         while ($libros = $sql->fetch_object()) { ?>
 
             <div class=" w-[100%] mx-2 my-10 p-5 py-12 text-left transform duration-500 hover:-translate-y-2 shadow-2xl cursor-pointer relative">

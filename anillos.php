@@ -68,7 +68,7 @@
                 <div class="grid grid-cols-2 gap-4 mt-4">
 
                     <button class="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
-                        <a href="anillos.php">Saga del anillo</a>
+                        <a href="anilos.php">Saga del anillo</a>
                     </button>
 
                     <button class="px-4 py-3 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm">
@@ -86,7 +86,7 @@
         <!-- lista todos los productos -->
         <?php
         include "models/connectDB.php";
-        $sql = $conecttion->query("SELECT * FROM libros");
+        $sql = $conecttion->query('SELECT * FROM libros WHERE titulo LIKE "%Anillos%"');
         while ($libros = $sql->fetch_object()) { ?>
 
             <div class=" w-[100%] mx-2 my-10 p-5 py-12 text-left transform duration-500 hover:-translate-y-2 shadow-2xl cursor-pointer relative">
