@@ -38,7 +38,7 @@
                         </g>
                     </svg>
                     <button><a class="p-2 px-6 bg-teal-500 text-white rounded-md hover:bg-teal-600 mx-4" href="login.php">Login</a></button>
-                    <button><a class="p-2 px-6 bg-teal-500 text-white rounded-md hover:bg-teal-600" href="register.php">Registrarse</a></button>
+                    
                 </ul>
             </nav>
         </div>
@@ -89,7 +89,7 @@
         $sql = $conecttion->query("SELECT * FROM libros");
         while ($libros = $sql->fetch_object()) { ?>
 
-            <div class=" w-[70%] md:w-[100%] my-10 p-5 py-12 text-left transform duration-500 hover:-translate-y-2 shadow-2xl cursor-pointer relative">
+            <div class="  w-[70%] md:w-[100%]  mx-2 my-10 p-5 py-12 text-left transform duration-500 hover:-translate-y-2 shadow-2xl cursor-pointer relative">
                 <img class="p-5 w-[80%]" src="data:image/jpg; base64, <?php echo base64_encode($libros->imagen) ?>">
                 <h1 class="text-3xl mb-5 h-16"><?= $libros->titulo ?></h1>
                 <div class="space-x-1 flex mb-5">

@@ -14,9 +14,9 @@ if (!empty($_POST["loginButton"])) {
             if ($resultAdmin->num_rows === 1) {
                 $adminUser = $resultAdmin->fetch_object();
                 if ($username === $adminUser->username && $adminUser->password) {
-                    echo '<div class="rounded-lg p-2 bg-green-100 mb-10 text-center font-semibold text-green-800">Welcome, administrator!</div>';
+                    echo '<div class="rounded-lg p-2 bg-green-100 mb-10 text-center font-semibold text-green-800">Bienvenido administrador</div>';
                     echo '<script>location.replace("adminhome.php")</script>';
-                    exit; // Stop further execution if logged in as admin
+                    exit; 
                 }
             }
     
@@ -29,17 +29,17 @@ if (!empty($_POST["loginButton"])) {
             if ($resultUser->num_rows === 1) {
                 $user = $resultUser->fetch_object();
                 if ($username === $user->username && $user->password) {
-                    echo '<div class="rounded-lg p-2 bg-green-100 mb-10 text-center font-semibold text-green-800">Welcome, normal user!</div>';
-                    // Redirect to user dashboard or home page
-                    echo '<script>location.replace("home.php")</script>';
-                    exit; // Stop further execution after successful login
+                    echo "<div class=\"rounded-lg p-2 bg-green-100 mb-10 text-center font-semibold text-green-800\">Bienvenido {$user->username}</div>";
+                    
+                    echo '<script>location.replace("userHome.php")</script>';
+                    exit; 
                 }
             }
     
             // If neither admin nor normal user credentials match
-            echo '<div class="rounded-lg p-2 bg-red-100 mb-10 text-center font-semibold text-red-800">Incorrect username or password</div>';
+            echo '<div class="rounded-lg p-2 bg-red-100 mb-10 text-center font-semibold text-red-800">usuario o password incorrecto</div>';
         } else {
-            echo '<div class="rounded-lg p-2 bg-red-400 mb-10 text-center font-semibold text-red-800">Incomplete fields</div>';
+            echo '<div class="rounded-lg p-2 bg-red-400 mb-10 text-center font-semibold text-red-800">Uno o mas campos vacios</div>';
         }
     }
         

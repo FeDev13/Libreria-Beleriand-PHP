@@ -107,13 +107,14 @@
         </div>
         <h2 class=" text-3xl font-bold my-10">Recomendados</h2>
     </div>
-    <div class=" flex flex-row border-4 border-b-teal-500 p-8">
+    
+    <div class="grid grid-cols-1 md:flex border-4 border-b-teal-500 p-8">
         <?php
         include "models/connectDB.php";
         $sql = $conecttion->query("SELECT * FROM libros WHERE id BETWEEN 4 AND 10");
         while ($libros = $sql->fetch_object()) { ?>
 
-            <div class=" w-[20%] mx-2 p-5 py-12 text-left transform duration-500 hover:-translate-y-2 shadow-2xl cursor-pointer relative">
+            <div class=" w-[80%] mx-2 p-5 py-12 text-left transform duration-500 hover:-translate-y-2 shadow-2xl cursor-pointer relative">
                 <img class="p-5 w-[60%]" src="data:image/jpg; base64, <?php echo base64_encode($libros->imagen)?>" alt="">
                 <h1 class="text-3xl mb-5 h-16"><?= $libros->titulo ?></h1>
                 <button class="sale absolute top-5 right-2 p-2 px-5 font-semibold bg-red-600 text-white uppercase">Ver</button>
@@ -125,13 +126,13 @@
     <div class=" text-center">
         <h2 class=" text-3xl font-bold my-10">Mas vendidos</h2>
     </div>
-    <div class=" flex flex-row border-4 border-b-teal-500 p-8">
+    <div class=" grid grid-cols-1 md:flex border-4 border-b-teal-500 p-8">
         <?php
         include "models/connectDB.php";
         $sql = $conecttion->query('SELECT * FROM libros WHERE id BETWEEN 12 AND 30');
         while ($libros = $sql->fetch_object()) { ?>
 
-            <div class=" w-[20%] mx-2 p-5 py-12 text-left transform duration-500 hover:-translate-y-2 shadow-2xl cursor-pointer relative">
+            <div class=" w-[80%] mx-2 p-5 py-12 text-left transform duration-500 hover:-translate-y-2 shadow-2xl cursor-pointer relative">
                 <img class="p-5 w-[60%]" src="data:image/jpg; base64, <?php echo base64_encode($libros->imagen)?>" alt="">
                 <h1 class="text-3xl mb-5 h-16"><?= $libros->titulo ?></h1>
                 <button class="sale absolute top-5 right-2 p-2 px-5 font-semibold bg-red-600 text-white uppercase">Ver</button>
