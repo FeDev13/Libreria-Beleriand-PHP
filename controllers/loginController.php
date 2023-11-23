@@ -1,11 +1,11 @@
 <?php
+
+session_start();
 if (!empty($_POST["loginButton"])) {
     if (!empty($_POST["loginButton"])) {
         if (!empty($_POST["username"]) && !empty($_POST["password"])) {
             $username = $_POST["username"];
-            $password = $_POST["password"];
-    
-            // Check for admin login
+            $password = $_POST["password"];        
             $sqlAdmin = $conecttion->prepare('SELECT * FROM usuarios WHERE id = 1 AND username = ?');
             $sqlAdmin->bind_param('s', $username);
             $sqlAdmin->execute();
@@ -20,7 +20,7 @@ if (!empty($_POST["loginButton"])) {
                 }
             }
     
-            // Check for normal user login
+            
             $sqlUser = $conecttion->prepare('SELECT * FROM usuarios WHERE id != 1 AND username = ?');
             $sqlUser->bind_param('s', $username);
             $sqlUser->execute();
@@ -36,7 +36,7 @@ if (!empty($_POST["loginButton"])) {
                 }
             }
     
-            // If neither admin nor normal user credentials match
+            
             echo '<div class="rounded-lg p-2 bg-red-100 mb-10 text-center font-semibold text-red-800">usuario o password incorrecto</div>';
         } else {
             echo '<div class="rounded-lg p-2 bg-red-400 mb-10 text-center font-semibold text-red-800">Uno o mas campos vacios</div>';

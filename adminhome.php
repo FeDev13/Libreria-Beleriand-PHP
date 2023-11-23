@@ -16,7 +16,9 @@
         <button class="bg-sky-600 p-2 rounded-lg text-white text-md font-semibold mx-10">
             <a href="addProduct.php">Agregar producto</a>
         </button>
-        <button class="bg-teal-600 p-2 rounded-lg text-white text-md font-semibold mx-10">Logout</button>
+        <button class="bg-teal-600 p-2 rounded-lg text-white text-md font-semibold mx-10">
+           <a href="closesession.php">Logout</a> 
+        </button>
         <a href="home.php">
             <svg fill="#000000" width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
